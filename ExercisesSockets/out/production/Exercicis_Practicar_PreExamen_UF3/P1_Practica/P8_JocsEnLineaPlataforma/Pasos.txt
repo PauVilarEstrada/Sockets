@@ -1,0 +1,18 @@
+Paso 1: Diseño del Servidor:
+
+El servidor debe ser capaz de manejar la autenticación de usuarios, la gestión de salas de juego y la comunicación en tiempo real entre los jugadores.
+Se necesitarán múltiples hilos para manejar las conexiones de los clientes de manera concurrente.
+Paso 2: Implementación del Servidor:
+
+Crear una clase GameServer que actúe como el servidor principal.
+Implementar la autenticación de usuarios mediante un sistema de inicio de sesión con nombre de usuario y contraseña.
+Gestionar la creación y unión de salas de juego.
+Establecer la comunicación en tiempo real entre los jugadores dentro de cada sala de juego.
+Controlar el número máximo de jugadores por sala y redirigir a los jugadores a la sala de espera si las salas están llenas.
+Enviar mensajes a los clientes cuando el servidor esté lleno.
+Paso 3: Desarrollo de los Clientes:
+
+Crear una clase GameClient para representar a cada cliente.
+Implementar la interfaz de usuario del cliente para permitir la autenticación, la selección de sala y la interacción con otros jugadores.
+Establecer la comunicación en tiempo real con el servidor para recibir actualizaciones de juego y enviar acciones del jugador.
+Manejar los mensajes del servidor, como notificaciones de salas llenas o actualizaciones de juego.

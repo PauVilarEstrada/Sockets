@@ -1,0 +1,4 @@
+Definir una clase para representar cada tipo de vehículo (coche, moto, barco y avión) con sus atributos de posición, velocidad y estado.
+Crear un servidor multihilo que pueda recibir conexiones de clientes y manejar múltiples solicitudes simultáneamente.
+Implementar la lógica del servidor para rastrear la ubicación y estado de los vehículos, así como para manejar las solicitudes de los clientes.
+Desarrollar un cliente que permita a los usuarios conectarse al servidor, visualizar la información de la flota de vehículos y enviar notificaciones en tiempo real.

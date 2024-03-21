@@ -1,0 +1,71 @@
+
+Para este ejercicio, implementaremos un juego simple de "Ping Pong" en el que dos jugadores
+controlan cada uno una paleta y una pelota se mueve entre ellos. El servidor manejará la lógica del juego,
+incluida la detección de colisiones y la actualización del estado del juego para todos los clientes.
+Utilizaremos sockets multihilo para permitir la comunicación en tiempo real entre el servidor y los clientes.
+
+Paso 1: Configuración del Proyecto
+
+Crea un proyecto en tu entorno de desarrollo preferido (por ejemplo, Eclipse, IntelliJ, etc.).
+Agrega las clases necesarias para el servidor y el cliente.
+Asegúrate de tener acceso a las bibliotecas de Java necesarias para la comunicación por sockets.
+Paso 2: Implementación del Servidor
+
+El servidor gestionará la lógica del juego y se comunicará con los clientes para sincronizar el estado del juego.
+
+Server.java: Esta clase será la principal que iniciará el servidor y gestionará las conexiones de los clientes.
+
+Paso 3: Implementación del Cliente
+
+El cliente enviará acciones del jugador al servidor y actualizará su estado de juego según la respuesta del servidor.
+
+Client.java: Esta clase será la principal que iniciará el cliente y gestionará la comunicación con el servidor.
+java
+
+Implementa la lógica de comunicación con el servidor en la clase Client. Esto incluirá el envío de acciones del
+jugador al servidor y la actualización del estado del juego según la respuesta del servidor.
+Paso 4: Implementación de la Lógica del Juego en el Servidor
+
+En el servidor, implementa la lógica del juego que gestionará la posición de la pelota, las paletas de los jugadores,
+la detección de colisiones, etc. Cuando un cliente envíe una acción (como mover su paleta), el servidor actualizará
+el estado del juego en consecuencia y enviará el nuevo estado del juego a todos los clientes conectados.
+
+Paso 5: Implementación de la Lógica del Juego en el Cliente
+
+En el cliente, implementa la lógica del juego que gestionará la representación visual del estado del juego. Esto
+incluirá dibujar las paletas de los jugadores y la pelota, detectar la entrada del jugador (por ejemplo, presionar
+las teclas de dirección para mover la paleta) y enviar acciones al servidor.
+
+Paso 6: Pruebas y Depuración
+
+Finalmente, prueba tu juego multijugador en tiempo real con varios clientes conectados para asegurarte de que la
+sincronización entre los clientes y el servidor funcione correctamente. Realiza cualquier depuración necesaria para
+solucionar problemas de sincronización o lógica del juego.
+
+
+
+La clase GameLogic maneja la lógica del juego, incluida la posición y la velocidad de la pelota, las posiciones de las paletas de los jugadores y la detección de colisiones.
+Los jugadores están representados por la clase Player, con una posición x y y.
+La pelota está representada por la clase Ball, con una posición x y y, y velocidades velX y velY.
+El método update() se encarga de actualizar la posición de la pelota en cada fotograma del juego y de manejar las colisiones con las paletas de los jugadores y los bordes de la pantalla.
+Los métodos getPlayers() y getBall() devuelven la lista de jugadores y la pelota, respectivamente, para que el servidor pueda enviar esta información a los clientes y mantener sincronizado el estado del juego.
+
+
+
+La clase Client es una ventana Swing que muestra el juego.
+Utilizamos un GamePanel (no proporcionado aquí) para dibujar el estado del juego en la ventana.
+La clase Client implementa la interfaz KeyListener para detectar las teclas presionadas por el jugador y enviar las acciones correspondientes al servidor.
+Cuando se presiona una tecla, se llama al método sendAction() para enviar la acción al servidor a través del PrintWriter.
+Recuerda que necesitarás implementar la clase GamePanel para dibujar el juego en la ventana del cliente. Además, debes asegurarte de que la lógica del juego en el servidor maneje correctamente las acciones recibidas del cliente y actualice el estado del juego en consecuencia.
+
+
+
+La clase GamePanel es una subclase de JPanel que se utiliza para dibujar el estado del juego en la ventana del cliente.
+Sobreescribimos el método paintComponent(Graphics g) para dibujar las paletas de los jugadores y la pelota en el panel.
+Obtenemos la información del estado del juego a través de la instancia de GameLogic y dibujamos las paletas y la pelota en las posiciones correspondientes.
+Utilizamos fillRect() para dibujar las paletas de los jugadores y fillOval() para dibujar la pelota.
+Toolkit.getDefaultToolkit().sync() se utiliza para sincronizar la ventana y evitar el parpadeo en la animación.
+
+
+
+

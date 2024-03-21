@@ -1,0 +1,6 @@
+Paso 1: Configuración del Servidor
+Capturar el video: El servidor capturará el video de un archivo utilizando una biblioteca como OpenCV.
+Transmitir el video a los clientes: El servidor enviará continuamente los fotogramas del video a todos los clientes conectados.
+Paso 2: Configuración del Cliente
+Recibir y mostrar el video: El cliente recibirá los fotogramas del video del servidor y los mostrará en una ventana de visualización.
+

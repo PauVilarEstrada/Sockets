@@ -1,0 +1,40 @@
+
+Paso 1: Definir el protocolo de comunicación
+
+Primero, definamos cómo se comunicarán el servidor y los clientes. Para este sistema de votación electrónica,
+necesitaremos mensajes para la autenticación, el registro de votos y la solicitud de resultados.
+
+Mensajes de autenticación:
+LOGIN <username> <password>: para que un votante se autentique con su nombre de usuario y contraseña.
+Mensajes de votación:
+VOTE <candidate_id>: para que un votante emita su voto por un candidato específico.
+Mensajes de solicitud de resultados:
+RESULTS: para que el cliente solicite los resultados finales de la votación.
+Paso 2: Implementar el servidor
+
+El servidor debe ser capaz de manejar múltiples clientes simultáneamente utilizando sockets multihilo.
+Deberá autenticar a los votantes, registrar sus votos y contar los votos recibidos.
+
+El servidor deberá tener una lista de votantes válidos con sus nombres de usuario y contraseñas.
+También necesitará mantener un registro de los votos emitidos por cada votante.
+Al finalizar la votación, el servidor deberá calcular y generar un informe final con los resultados de la votación.
+Paso 3: Implementar el cliente
+
+El cliente debe permitir que los votantes se conecten al servidor, se autentiquen y emitan sus votos de manera segura.
+
+El cliente debe proporcionar una interfaz para que los votantes ingresen su nombre de usuario y contraseña.
+Debe permitir a los votantes seleccionar un candidato y enviar su voto al servidor de manera segura.
+También debería permitir a los votantes solicitar los resultados finales de la votación.
+Paso 4: Implementar la lógica de votación
+
+Dentro del servidor, se debe implementar la lógica para procesar los votos recibidos, mantener un registro de
+los votos emitidos y calcular los resultados finales de la votación.
+
+El servidor debe validar la autenticidad de los votantes y garantizar que no voten más de una vez.
+Deberá mantener un registro de los votos emitidos por cada votante y contar los votos recibidos para cada candidato.
+Una vez que se cierre la votación, el servidor deberá calcular y generar un informe final con los resultados de la votación.
+Paso 5: Ejecutar el sistema y probar la funcionalidad
+
+Finalmente, después de implementar el servidor y el cliente, ejecutaremos el sistema y probaremos su funcionalidad.
+Verificaremos que los votantes puedan conectarse, autenticarse y emitir sus votos de manera segura, y que el
+servidor pueda contar los votos y generar un informe final con los resultados de la votación.

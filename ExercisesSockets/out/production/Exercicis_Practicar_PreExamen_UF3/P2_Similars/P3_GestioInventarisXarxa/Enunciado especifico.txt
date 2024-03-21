@@ -1,0 +1,19 @@
+Servidor de Inventarios Multihilo
+Implementa un servidor de inventarios multihilo que acepte conexiones de múltiples
+sucursales de una empresa. Cada sucursal actuará como un cliente que enviará al servidor
+información sobre las ventas realizadas y los productos en stock. El servidor deberá
+ mantener un registro centralizado del inventario de la empresa y proporcionar herramientas
+ para monitorear las ventas en tiempo real, realizar pedidos de reposición de productos y
+ gestionar el inventario de manera eficiente.
+
+Cliente de Sucursal
+Implementa un cliente de sucursal que se conecte al servidor de inventarios. El cliente
+enviará al servidor información sobre las ventas realizadas y los productos en stock. Además,
+el cliente deberá proporcionar una interfaz para realizar pedidos de reposición de productos y
+consultar el estado del inventario en tiempo real. El cliente deberá ser capaz de manejar
+múltiples hilos para procesar las operaciones de manera eficiente.
+
+Estos enunciados proporcionan una visión general de lo que se espera que hagan el servidor y
+el cliente en este sistema de gestión de inventarios en red. Deberás implementar la lógica
+específica para manejar las operaciones de inventario, las comunicaciones a través de sockets y
+la sincronización de hilos para garantizar un funcionamiento seguro y eficiente del sistema.

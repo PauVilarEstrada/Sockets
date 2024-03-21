@@ -1,0 +1,39 @@
+Servidor:
+Preparación del Servidor:
+
+El servidor necesitará una carpeta principal donde almacenará los archivos compartidos por los clientes y otra carpeta donde guardará los archivos recibidos de los clientes.
+Creamos un servidor que escucha en un puerto específico para aceptar conexiones de clientes.
+Manejo de Conexiones:
+
+Cuando un cliente se conecta al servidor, se inicia un nuevo hilo para manejar su conexión.
+Dentro de este hilo, se solicitará al cliente que ingrese su nombre de usuario para identificarlo.
+Operaciones del Servidor:
+
+El servidor debe ser capaz de recibir archivos de los clientes y almacenarlos en la carpeta de archivos recibidos.
+Debe mostrar por pantalla la lista de archivos disponibles en la carpeta principal para que los clientes puedan descargarlos.
+Cuando un cliente solicite descargar un archivo, el servidor debe enviar el archivo solicitado al cliente.
+Además, el servidor debe mostrar por pantalla cualquier archivo que reciba de los clientes y guardarlos en la carpeta de archivos recibidos.
+Cliente:
+Preparación del Cliente:
+
+El cliente también necesitará una carpeta donde almacenará los archivos que desea enviar al servidor y otra carpeta donde almacenará los archivos recibidos del servidor.
+Conexión al Servidor:
+
+El cliente debe poder conectarse al servidor utilizando la dirección IP y el puerto del servidor.
+Operaciones del Cliente:
+
+Después de conectarse al servidor, se le solicitará al cliente que ingrese su nombre de usuario.
+El cliente debe poder cargar archivos desde su carpeta local y enviarlos al servidor.
+También debe poder descargar archivos del servidor y guardarlos en su carpeta local.
+Cualquier archivo que reciba del servidor debe ser guardado en su carpeta de archivos recibidos.
+Además, cualquier archivo que envíe al servidor debe mostrarse por pantalla tanto en el cliente como en el servidor.
+Implementación Adicional:
+El sistema debe ser capaz de manejar múltiples clientes simultáneamente mediante el uso de sockets multihilo.
+Se deben implementar mecanismos de manejo de errores y excepciones para garantizar la robustez del sistema.
+Se debe proporcionar una interfaz de usuario clara y amigable para que los usuarios puedan interactuar fácilmente con el sistema de gestión de archivos distribuido.
+
+Implementación Adicional:
+El sistema debe ser capaz de manejar múltiples clientes simultáneamente mediante el uso de sockets multihilo.
+Se deben implementar mecanismos de manejo de errores y excepciones para garantizar la robustez del sistema.
+Se debe proporcionar una interfaz de usuario clara y amigable para que los usuarios puedan interactuar fácilmente con el sistema de gestión de archivos distribuido.
+Una vez completado, el sistema permitirá a los clientes conectarse al servidor, cargar archivos para compartir, descargar archivos de otros clientes y administrar sus propios archivos de manera eficiente y segura.

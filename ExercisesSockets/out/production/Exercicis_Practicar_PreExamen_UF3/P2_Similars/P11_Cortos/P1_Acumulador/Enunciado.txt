@@ -1,0 +1,5 @@
+
+Ejercicio 1: Servidor de acumulación
+Implementaremos un servidor que reciba números de clientes y los sume en un acumulador.
+Cada vez que un cliente se conecte, el servidor le enviará el número de cliente que es y la suma
+total acumulada hasta ese momento.

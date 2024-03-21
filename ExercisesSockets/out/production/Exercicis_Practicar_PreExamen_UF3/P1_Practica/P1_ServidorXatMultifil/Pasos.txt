@@ -1,0 +1,20 @@
+El servidor crea un ServerSocket y escucha conexiones entrantes en un bucle infinito.
+Cada vez que se establece una nueva conexión con un cliente, se crea un nuevo hilo para manejar
+esa conexión (ClientHandler).
+El ClientHandler se encarga de recibir los mensajes del cliente y reenviarlos a todos los clientes conectados.
+El cliente se conecta al servidor a través de un socket y establece flujos de entrada y salida
+para comunicarse con el servidor.
+Un hilo separado en el cliente se encarga de leer mensajes del usuario y enviarlos al servidor.
+El cliente también recibe mensajes del servidor y los muestra en la consola.
+
+En el servidor, hemos añadido un mapa (clients) para asociar nombres de usuario con los PrintWriter
+correspondientes para enviar mensajes a clientes específicos.
+Cuando un cliente se conecta, se le pide que introduzca un nombre de usuario. Este nombre
+se añade al mapa de clientes.
+El servidor puede gestionar mensajes privados usando el comando /msg username message.
+Cuando un cliente se desconecta, su nombre de usuario se elimina del mapa de clientes y se
+notifica a todos los demás clientes.
+En el cliente, se pide al usuario que introduzca un nombre de usuario al inicio. Este nombre se
+envía al servidor para su identificación.
+El cliente puede enviar mensajes normales que se enviarán a todos los clientes o mensajes privados
+usando el formato /msg username message.

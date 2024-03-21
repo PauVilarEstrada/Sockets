@@ -1,0 +1,4 @@
+Implementaremos un servidor que tenga un directorio público y, cuando un cliente
+se conecte, le enviará la lista de nombres de archivos en ese directorio. El cliente elegirá
+un archivo de la lista y el servidor enviará ese archivo al cliente, quien lo guardará en su
+sistema de archivos local.

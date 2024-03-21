@@ -1,0 +1,2 @@
+Implementaremos un juego donde el servidor elegirá aleatoriamente un número entre 1 y 20, y el cliente
+intentará adivinarlo. El servidor responderá si el número es correcto o no.
