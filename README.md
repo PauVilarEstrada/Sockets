@@ -1,13 +1,13 @@
 
 # Multithreaded Socket Exercises #
 
-English 
+### English ###
 
 This repository hosts a variety of exercises focusing on multithreaded sockets. Sockets serve as communication endpoints facilitating two-way communication between processes, either locally or across a network. Multithreading empowers the handling of multiple connections simultaneously, thus improving the scalability and responsiveness of network applications.
 
-Folder Structure:
+## Folder Structure: ##
 
-ExercisesSockets: This directory contains numerous exercises on multithreaded sockets. Each exercise comes with instructions (in Spanish) and steps for completion. Both client and server components are provided within each exercise folder.
+### ExercisesSockets: ### This directory contains numerous exercises on multithreaded sockets. Each exercise comes with instructions (in Spanish) and steps for completion. Both client and server components are provided within each exercise folder.
 
 OneExerciseSocket: This directory hosts a single exercise without accompanying instructions.
 
