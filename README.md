@@ -14,6 +14,7 @@ OneExerciseSocket: This directory hosts a single exercise without accompanying i
 ExercisesSockets_General: Here you'll find additional exercises without specific instructions but including guidance (in Spanish). It's further divided into three subfolders, with one containing client exercises (WithExercisesSockets_General_PartTo_P1_Client) and the other containing server exercises.
 
 ¿Qué son los Sockets Multihilo?
+
 Los sockets multihilo son una técnica para manejar múltiples conexiones de red de manera simultánea dentro de una aplicación. Permiten que un servidor atienda a varios clientes al mismo tiempo, lo que mejora la eficiencia y la capacidad de respuesta de las aplicaciones de red. En un entorno multihilo, cada conexión de cliente se maneja en un hilo separado, lo que permite un procesamiento concurrente sin bloquear otras conexiones.
 
 Estructura de Carpetas:
