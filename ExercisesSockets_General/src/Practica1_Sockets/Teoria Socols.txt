@@ -1,0 +1,40 @@
+Programación en Red:
+La programación en red se refiere a la habilidad de escribir programas que pueden comunicarse a
+través de una red de computadoras. Esto implica el intercambio de datos entre diferentes
+dispositivos conectados a la red, ya sea localmente o a través de internet.
+
+Comunicación en Red:
+La comunicación en red implica el intercambio de datos entre dos o más dispositivos a
+través de una red. Esto se logra estableciendo conexiones entre los dispositivos y utilizando
+protocolos de comunicación estándar, como TCP/IP o UDP/IP.
+
+Establecimiento de Comunicación entre dos Máquinas:
+Para establecer la comunicación entre dos máquinas, una debe actuar como servidor, esperando
+conexiones entrantes, mientras que la otra actúa como cliente, intentando establecer una conexión
+con el servidor. El servidor escucha en un puerto específico y el cliente se conecta a ese puerto para
+iniciar la comunicación.
+
+Sockets o Zócalos:
+Los sockets son puntos finales de una comunicación entre procesos a través de una red.
+En Java, se utilizan las clases ServerSocket y Socket para implementar la comunicación a través del
+protocolo TCP.
+
+Funcionamiento de los Sockets en Java:
+
+El servidor asigna un número de puerto y espera conexiones entrantes.
+El cliente intenta la conexión especificando la dirección IP y el puerto del servidor.
+Cuando se establece la conexión, se crea un socket que proporciona un canal de comunicación entre
+el cliente y el servidor.
+Los procesos intercambian datos a través de los streams de entrada y salida asociados al socket.
+Una vez completada la comunicación, el canal se cierra.
+Ejemplo de Servidor en Java:
+Un servidor en Java espera conexiones de clientes en un puerto específico. Al conectarse un cliente,
+envía un mensaje de bienvenida y luego cierra la conexión.
+
+Ejemplo de Cliente en Java:
+Un cliente en Java se conecta a un servidor específico y lee un mensaje de bienvenida enviado por el servidor.
+
+Ampliación del Ejemplo:
+Se puede ampliar el ejemplo del servidor para que muestre la dirección IP y el puerto donde
+está escuchando el servicio, así como la dirección IP y el puerto del cliente que se conecta. Además,
+esta información se puede agregar al mensaje de bienvenida enviado al cliente.

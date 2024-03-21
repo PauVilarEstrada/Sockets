@@ -1,0 +1,43 @@
+Los Sockets Multihilo son una técnica utilizada en programación para permitir
+que un servidor atienda múltiples clientes de manera simultánea. Esto se logra mediante la
+creación de un hilo independiente para cada conexión entrante, lo que permite al servidor manejar
+las solicitudes de cada cliente de forma concurrente.
+
+Funcionamiento de los Sockets Multihilo:
+
+Servidor: El servidor crea un ServerSocket que escucha las conexiones entrantes en un
+determinado puerto. Cuando un cliente se conecta, el servidor acepta la conexión y crea un
+nuevo hilo para manejar las solicitudes de ese cliente.
+
+Cliente: El cliente crea un Socket que se conecta al servidor a través de la dirección IP y el
+puerto proporcionados. Una vez establecida la conexión, el cliente puede enviar y recibir datos
+al servidor a través de los flujos de entrada y salida del socket.
+
+Hilos: Cada vez que un cliente se conecta, el servidor crea un nuevo hilo para manejar las
+operaciones de ese cliente. Este hilo se encarga de interactuar con el cliente, procesar sus
+solicitudes y enviar respuestas.
+
+Ejemplo de implementación:
+
+En el código proporcionado, se muestra un ejemplo de un servidor y un cliente Java que utilizan
+sockets multihilo. El servidor utiliza la clase ServidorMultifil para aceptar conexiones entrantes
+y crear un nuevo hilo para manejar cada cliente. El cliente se conecta al servidor
+utilizando la clase Client.
+
+Consideraciones de seguridad:
+
+Es importante tener en cuenta que al trabajar con sockets multihilo, se deben implementar
+medidas de seguridad adecuadas para evitar problemas de concurrencia, como condiciones de
+carrera o bloqueos. En el ejemplo proporcionado, se utilizan clases como AtomicInteger para
+garantizar un acceso seguro a variables compartidas entre hilos.
+
+Validación de thread-safety:
+
+Para validar que el acceso a las variables compartidas es thread-safe, es necesario realizar
+pruebas con múltiples clientes simultáneos para asegurarse de que no haya conflictos en el
+acceso a los recursos compartidos, como el contador de clientes en el servidor.
+
+En resumen, los sockets multihilo son una herramienta poderosa para desarrollar aplicaciones
+de red que requieren manejar múltiples conexiones simultáneas de manera eficiente y segura. Al
+implementar correctamente esta técnica, se puede lograr un rendimiento óptimo y una experiencia
+de usuario fluida en aplicaciones que involucran comunicación en red.

@@ -1,0 +1,150 @@
+Protocolos de Red:
+
+HTTP (Hypertext Transfer Protocol): Es el protocolo utilizado para la transferencia de datos en la web.
+Permite la comunicación entre clientes y servidores web, facilitando la solicitud y entrega de recursos,
+como páginas web, imágenes, archivos, etc.
+
+FTP (File Transfer Protocol): Protocolo de transferencia de archivos utilizado para la transferencia de
+archivos entre un cliente y un servidor en una red TCP/IP. Permite la carga y descarga
+de archivos desde y hacia un servidor FTP.
+
+POP3 (Post Office Protocol 3): Es un protocolo estándar utilizado para recuperar correos electrónicos
+de un servidor remoto. POP3 descarga los correos electrónicos del servidor al cliente, y normalmente elimina
+los correos del servidor una vez descargados.
+
+IMAP (Internet Message Access Protocol): Similar a POP3, IMAP es un protocolo de acceso a
+mensajes de correo electrónico. Sin embargo, en lugar de descargar los correos electrónicos al cliente
+y eliminarlos del servidor, IMAP permite gestionar los correos electrónicos directamente en el servidor,
+lo que permite acceder a los correos desde múltiples dispositivos.
+
+SMTP (Simple Mail Transfer Protocol): Es el protocolo estándar utilizado para el envío de correos electrónicos.
+SMTP se utiliza para enviar mensajes de correo electrónico entre servidores de correo electrónico y también entre
+clientes de correo electrónico y servidores de correo electrónico saliente.
+
+DHCP (Dynamic Host Configuration Protocol): Protocolo de red utilizado para asignar direcciones IP
+automáticamente a dispositivos en una red. DHCP simplifica la administración de direcciones IP al permitir
+que un servidor DHCP asigne direcciones IP de manera dinámica a dispositivos en la red cuando se conectan.
+
+DNS (Domain Name System): Protocolo utilizado para traducir nombres de dominio legibles para los humanos en
+direcciones IP numéricas utilizadas por las computadoras para identificar recursos en una red. DNS actúa como
+un directorio de Internet al asociar nombres de dominio con direcciones IP correspondientes.
+
+Ejemplos de Uso:
+
+HTTP: Cuando navegas por Internet y accedes a un sitio web utilizando un navegador web como Chrome o Firefox,
+ estás utilizando el protocolo HTTP para solicitar y recibir las páginas web y otros recursos del servidor web.
+
+FTP: Si necesitas transferir archivos grandes o una gran cantidad de archivos a un servidor remoto, puedes
+utilizar un cliente FTP como FileZilla para conectarte a un servidor FTP y cargar o
+descargar archivos según sea necesario.
+
+POP3: Cuando configuras un cliente de correo electrónico como Outlook o Thunderbird para recuperar
+correos electrónicos de tu proveedor de correo electrónico, generalmente estás utilizando el protocolo
+POP3 para descargar los correos electrónicos del servidor a tu cliente de correo electrónico.
+
+IMAP: Si prefieres acceder a tus correos electrónicos desde múltiples dispositivos y quieres que los
+correos electrónicos permanezcan en el servidor incluso después de leerlos, puedes configurar tu cliente
+de correo electrónico para utilizar IMAP en lugar de POP3.
+
+SMTP: Cuando envías un correo electrónico desde tu cliente de correo electrónico a un destinatario, tu
+cliente de correo electrónico utiliza el protocolo SMTP para enviar el correo electrónico al servidor de
+correo electrónico saliente, que luego lo entrega al servidor de correo electrónico del destinatario.
+
+DHCP: Cuando te conectas a una red Wi-Fi en un dispositivo móvil o computadora portátil y obtienes
+automáticamente una dirección IP, estás utilizando DHCP para asignar dinámicamente una dirección IP a tu dispositivo.
+
+DNS: Cada vez que escribes una URL en el navegador web para acceder a un sitio web, el navegador
+utiliza DNS para traducir el nombre de dominio en una dirección IP numérica que identifica
+al servidor web que aloja el sitio web.
+
+
+La clase URL en Java tiene diferentes constructores para permitir la creación de objetos URL de varias maneras,
+dependiendo de cómo se proporciona la información de la URL.
+
+Ejemplos de algunos constructores de la clase URL:
+
+Constructor básico: Este constructor toma una cadena de URL como argumento.
+
+URL url = new URL("https://www.example.com");
+
+Constructor con URL base y una cadena de URL relativa: Este constructor toma una URL
+base y una cadena de URL relativa y construye una URL completa.
+
+URL baseUrl = new URL("https://www.example.com");
+URL url = new URL(baseUrl, "/path/to/resource");
+
+
+Constructor con protocolo, host y ruta: Este constructor toma el protocolo, el host y la ruta como argumentos separados.
+
+URL url = new URL("https", "www.example.com", "/path/to/resource");
+
+
+Codificación de caracteres especiales en una URL:
+
+La codificación de caracteres especiales en una URL se refiere a reemplazar caracteres no permitidos
+con secuencias de escape. Por ejemplo, un espacio en blanco se codifica como %20. En Java, podemos
+tratar con caracteres especiales utilizando el método URLEncoder.encode() para
+codificarlos y URLDecoder.decode() para decodificarlos.
+
+Programa para mostrar las partes de una URL:
+
+import java.net.URL;
+import java.util.Scanner;
+
+public class URLInfo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce una URL: ");
+        String urlString = scanner.nextLine();
+
+        try {
+            URL url = new URL(urlString);
+            System.out.println("Protocolo: " + url.getProtocol());
+            System.out.println("Host: " + url.getHost());
+            System.out.println("Puerto: " + url.getPort());
+            System.out.println("Ruta: " + url.getPath());
+            System.out.println("Query: " + url.getQuery());
+            System.out.println("Referencia: " + url.getRef());
+        } catch (Exception e) {
+            System.out.println("Error al analizar la URL: " + e.getMessage());
+        }
+    }
+}
+
+
+
+Para conectarse a una URL y descargar el contenido de la web utilizando
+las clases del paquete java.net.http, podemos seguir los siguientes pasos:
+
+Crear un objeto HttpClient.
+Crear un objeto HttpRequest que represente la solicitud a la URL deseada.
+Enviar la solicitud utilizando el objeto HttpClient y obtener un objeto HttpResponse.
+Leer el contenido de la respuesta y almacenarlo en un archivo o procesarlo según sea necesario.
+
+
+IMPORTANTE:
+java.net.http.HttpClient
+java.net.http.HttpRequest
+java.net.http.HttpResponse
+
+Aquí tienes los pasos para conectarte a una URL y descargar el contenido de la web utilizando
+las clases java.net.http.HttpClient, java.net.http.HttpRequest y java.net.http.HttpResponse:
+
+Crear un objeto HttpClient: Primero, necesitas crear una instancia de la clase HttpClient, que
+se utilizará para enviar solicitudes HTTP y recibir respuestas.
+
+Crear un objeto HttpRequest: Luego, necesitas construir un objeto HttpRequest que represente la
+solicitud que deseas enviar. Esto incluye configurar el método de solicitud (GET, POST, etc.), la
+URL de destino y cualquier otro detalle de la solicitud que desees incluir, como encabezados
+o cuerpo de la solicitud.
+
+Enviar la solicitud y recibir la respuesta: Utiliza el objeto HttpClient para enviar la solicitud
+al servidor y recibir la respuesta correspondiente. La respuesta se encapsula en un objeto HttpResponse,
+que contiene información sobre el código de estado, encabezados y el cuerpo de la respuesta.
+
+Procesar la respuesta: Finalmente, procesa el cuerpo de la respuesta según sea necesario. Puedes extraer
+el contenido de la respuesta y guardarlo en un archivo, imprimirlo por pantalla, o realizar cualquier
+otra operación que desees.
+
+Aquí tienes un ejemplo básico que muestra cómo realizar estos pasos para conectarte a una URL y
+descargar el contenido de la web:

@@ -1,0 +1,9 @@
+
+Para crear un programa que busque información sobre una película en IMDb y guarde
+el resultado en un archivo HTML, podemos seguir los siguientes pasos:
+
+Pedir al usuario que introduzca el título de la película.
+Construir la URL de búsqueda en IMDb utilizando el título proporcionado.
+Realizar una solicitud HTTP GET a la URL utilizando la clase java.net.http.HttpClient.
+Analizar la respuesta para extraer la información relevante de la película.
+Guardar la información en un archivo HTML.

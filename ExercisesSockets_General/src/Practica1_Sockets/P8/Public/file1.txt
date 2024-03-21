@@ -1,0 +1,3 @@
+Este es el archivo 1.
+Contiene algunas líneas de texto.
+Puedes utilizar este archivo para probar el cliente.
